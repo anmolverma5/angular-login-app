@@ -1,22 +1,33 @@
-import { HttpClient, HttpContext, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { User } from './user.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  noAuthHeader: any;
   selectedUser: User = {
     fullName: '',
     email: '',
     password: '',
   };
-  constructor(public http: HttpClient) {}
+
+  noAuthHeader = { headers: new HttpHeaders({ NoAuth: 'True' }) };
+
+  constructor(private http: HttpClient) {}
+
+  //HttpMethods
+
   postUser(user: User) {
-    return this.http.post(environment.apiBaseUrl + '/register', user);
+    return this.http.post(
+      environment.apiBaseUrl + '/register',
+      user,
+      this.noAuthHeader
+    );
   }
+
   login(authCredentials: any) {
     return this.http.post(
       environment.apiBaseUrl + '/authenticate',

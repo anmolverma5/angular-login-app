@@ -5,6 +5,17 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
+
+/*{
+  "development": {
+      "PORT": 3000,
+      "MONGODB_URI": "mongodb://localhost:27017/angular-login-app"
+  },
+  "production": {
+      "PORT": 80,
+      "MONGODB_URI": "mongodb://xxxxx/DB_Name"
+  }
+}*/
