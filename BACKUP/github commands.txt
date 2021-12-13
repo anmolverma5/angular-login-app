@@ -1,0 +1,11 @@
+https://github.com/anmolverma5/angular-login-app.git
+
+echo "https://github.com/anmolverma5/angular-login-app.git angular-login-app" >> README.md
+
+
+// existing repo commands
+
+git add .
+git remote add origin https://github.com/anmolverma5/angular-login-app.git
+git branch -M main
+git push -u origin main
