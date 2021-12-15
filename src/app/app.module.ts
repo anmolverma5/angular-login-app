@@ -13,6 +13,7 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 import { UserService } from './user/shared/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { ProductsComponent } from './components/products/products.component';
 // other
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     SignUpComponent,
     UserProfileComponent,
     SignInComponent,
+    ProductsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [

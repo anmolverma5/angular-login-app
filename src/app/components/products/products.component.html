@@ -1,0 +1,46 @@
+<!-- <div *ngFor="let items of productdata ">
+  <div>{{ items.title }}</div>
+</div> -->
+<div class="product-card">
+  <div *ngFor="let items of product1 ">
+    <div class="badge">Hot</div>
+    <div class="product-tumb">
+      <img src="{{ items.image }}" alt="">
+    </div>
+    <div class="product-details">
+      <!-- <p>{{ product1.title }}</p> -->
+      <span class="product-catagory">{{ items.title }}</span>
+      <h4><a>{{ items.title}}</a></h4>
+      <p>{{ items.description }}</p>
+      <div class="product-bottom-details">
+        <div class="product-price"><small>$15.99</small>{{ items.price }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="product-links">
+    <div #paypalRef></div>
+    <a href=""><i class="fa fa-heart"></i></a>
+    <a href=""><i class="fa fa-shopping-cart"></i></a>
+  </div>
+</div>
+<div class="product-card">
+  <div *ngFor="let items of product2 ">
+    <div class="badge">Hot</div>
+    <div class="product-tumb">
+      <img src="{{ items.image }}" alt="addidas">
+    </div>
+    <div class="product-details">
+      <span class="product-catagory">{{ items.title }}</span>
+      <h4><a>{{ items.title }}</a></h4>
+      <p>{{ items.description }}</p>
+      <div class="product-bottom-details">
+        <div class="product-price"><small>$15.99</small>{{ items.price }}</div>
+      </div>
+      <div class="product-links">
+        <div id="myPaypalButtons"></div>
+        <a href=""><i class="fa fa-heart"></i></a>
+        <a href=""><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+http://localhost:4200/anmol/angular-login-app/src/assets/img/nike-t-shirt.jpg
